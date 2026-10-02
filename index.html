@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Dynamic Task Manager</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="page__header">
+      <h1>Secure Dynamic Task Manager</h1>
+      <p class="page__subtitle">Add, edit, complete, and remove tasks without reloading the page.</p>
+    </header>
+
+    <main class="manager">
+      <section class="task-form" aria-label="Add a task">
+        <label for="taskInput">New task</label>
+        <div class="task-form__row">
+          <input type="text" id="taskInput" placeholder="Enter a task" autocomplete="off" />
+          <button type="button" id="addTaskBtn">Add Task</button>
+          <button type="button" id="loadSamplesBtn" class="secondary">Load Sample Tasks</button>
+        </div>
+        <p id="taskMessage" class="form-message" role="status"></p>
+      </section>
+
+      <section class="summary" aria-label="Task summary">
+        <div class="summary__item">
+          <span class="summary__label">Total Tasks:</span>
+          <span id="totalCount" class="summary__value">0</span>
+        </div>
+        <div class="summary__item">
+          <span class="summary__label">Pending:</span>
+          <span id="pendingCount" class="summary__value">0</span>
+        </div>
+        <div class="summary__item">
+          <span class="summary__label">Completed:</span>
+          <span id="completedCount" class="summary__value">0</span>
+        </div>
+      </section>
+
+      <ul id="taskList" class="task-list" aria-label="Task list"></ul>
+    </main>
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
